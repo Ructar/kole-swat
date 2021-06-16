@@ -1,5 +1,6 @@
 isGrappling = false
 grappleRope = nil
+poleCamera = nil
 
 Citizen.CreateThread(function()
     while true do
@@ -56,3 +57,7 @@ AddEventHandler("SWAT:CreateRope", function()
     end
 end)
 
+RegisterNetEvent("SWAT:PoleCam")
+AddEventHandler("SWAT:PoleCam", function()
+    poleCamera = CreateObject()
+end)
